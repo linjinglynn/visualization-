@@ -103,7 +103,8 @@ df <- data.frame(
   final_score = c(9, 9.3, 9.4, 9, 9, 8.9, 9.25, 9.6, 8.8, 8.7),
   registered = c(TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE),
   stringsAsFactors = FALSE)
-                                                                       
+
+# age从白到橙标识，grade为A的以绿标识，score粉色高亮，final排序，registered标勾叉                                                                       
 formattable(df, list(
   age = color_tile("white", "orange"),
   grade = formatter("span", style = x ~ ifelse(x == "A", 
